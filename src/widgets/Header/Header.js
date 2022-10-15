@@ -1,19 +1,22 @@
 import { View } from 'react-native';
+import { MiLogo } from '../../shared/img/MiLogo';
+import { BurgerMenu } from '../../shared/ui/Buttons/BurgerMenu/BurgerMenu';
 
 export const Header = () => {
 	return (
-		<View>
-			<svg
-				width='15'
-				height='12'
-				viewBox='0 0 15 12'
-				fill='none'
-				xmlns='http://www.w3.org/2000/svg'
-			>
-				<path d='M1 1H14' stroke='#A2A2A2' stroke-linecap='round' />
-				<path d='M1 6H14' stroke='#A2A2A2' stroke-linecap='round' />
-				<path d='M1 11H14' stroke='#A2A2A2' stroke-linecap='round' />
-			</svg>
+		<View style={style.header}>
+			<BurgerMenu></BurgerMenu>
+			<MiLogo></MiLogo>
 		</View>
 	);
 };
+
+const style = StyleSheet.create({
+	header: {
+		display: 'flex',
+		alignItems: 'center',
+	},
+	logo: {
+		marginLeft: 'auto',
+	},
+});
